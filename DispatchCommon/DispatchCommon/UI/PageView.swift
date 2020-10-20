@@ -11,7 +11,7 @@ public struct PageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
     @State var currentPage = 0
     
-    init(_ views: [Page]) {
+    public init(_ views: [Page]) {
         viewControllers = views.map { UIHostingController(rootView: $0) }
     }
     

@@ -33,6 +33,7 @@ struct PageViewController: UIViewControllerRepresentable {
     // MARK: - Nested Coordinator
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         var parent: PageViewController
+        var pendingIndex: Int?
         
         init(_ pageViewController: PageViewController) {
             parent = pageViewController
@@ -60,11 +61,13 @@ struct PageViewController: UIViewControllerRepresentable {
         }
         
         // MARK: - UIPageViewControllerDelegate
+        func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+            pendingIndex = parent.controllers.firstIndex(of: pendingViewControllers[0])
+        }
         func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-            if completed,
-               let visibleViewController = pageViewController.viewControllers?.first,
-               let index = pageViewController.viewControllers?.firstIndex(of: visibleViewController) {
+            if completed, let index = pendingIndex {
                 parent.currentPage = index
+                pendingIndex = nil
             }
         }
     }
