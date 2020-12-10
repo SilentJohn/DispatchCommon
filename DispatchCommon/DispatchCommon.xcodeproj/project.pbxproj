@@ -13,6 +13,9 @@
 		17162437253C526F00B88033 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17162434253C526F00B88033 /* PageView.swift */; };
 		17162438253C526F00B88033 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17162435253C526F00B88033 /* PageControl.swift */; };
 		17162439253C526F00B88033 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17162436253C526F00B88033 /* PageViewController.swift */; };
+		174A3BBC2546B5A900709F0F /* MultiSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A3BBB2546B5A900709F0F /* MultiSelectView.swift */; };
+		174A3BC02546BDCD00709F0F /* MultiSelectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A3BBF2546BDCD00709F0F /* MultiSelectDetailView.swift */; };
+		1784EC7B254BC2D00019F4D6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784EC7A254BC2D00019F4D6 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		17162434253C526F00B88033 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		17162435253C526F00B88033 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		17162436253C526F00B88033 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		174A3BBB2546B5A900709F0F /* MultiSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectView.swift; sourceTree = "<group>"; };
+		174A3BBF2546BDCD00709F0F /* MultiSelectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectDetailView.swift; sourceTree = "<group>"; };
+		1784EC7A254BC2D00019F4D6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		17162419253C525400B88033 /* DispatchCommon */ = {
 			isa = PBXGroup;
 			children = (
+				174A3BB02546A4F200709F0F /* Extensions */,
 				17162433253C525C00B88033 /* UI */,
 				1716241A253C525400B88033 /* DispatchCommon.h */,
 				1716241B253C525400B88033 /* Info.plist */,
@@ -99,8 +106,18 @@
 				17162435253C526F00B88033 /* PageControl.swift */,
 				17162434253C526F00B88033 /* PageView.swift */,
 				17162436253C526F00B88033 /* PageViewController.swift */,
+				174A3BBB2546B5A900709F0F /* MultiSelectView.swift */,
+				174A3BBF2546BDCD00709F0F /* MultiSelectDetailView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		174A3BB02546A4F200709F0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1784EC7A254BC2D00019F4D6 /* ColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +231,9 @@
 			files = (
 				17162439253C526F00B88033 /* PageViewController.swift in Sources */,
 				17162438253C526F00B88033 /* PageControl.swift in Sources */,
+				174A3BC02546BDCD00709F0F /* MultiSelectDetailView.swift in Sources */,
+				1784EC7B254BC2D00019F4D6 /* ColorExtension.swift in Sources */,
+				174A3BBC2546B5A900709F0F /* MultiSelectView.swift in Sources */,
 				17162437253C526F00B88033 /* PageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
